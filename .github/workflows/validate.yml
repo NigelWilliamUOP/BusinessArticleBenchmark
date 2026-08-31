@@ -14,4 +14,6 @@ jobs:
           python-version: "3.12"
       - run: python scripts/validate_manifests.py
       - run: python scripts/validate_forecast_inputs.py
-      - run: python -m py_compile scripts/validate_manifests.py scripts/validate_results.py scripts/validate_forecast_inputs.py scripts/forecast_capability_share.py
+      - run: python scripts/validate_synthetic_inputs.py
+      - run: python scripts/build_synthetic_index.py --output /tmp/frontier_index.json
+      - run: python -m py_compile scripts/validate_manifests.py scripts/validate_results.py scripts/validate_forecast_inputs.py scripts/forecast_capability_share.py scripts/validate_synthetic_inputs.py scripts/build_synthetic_index.py

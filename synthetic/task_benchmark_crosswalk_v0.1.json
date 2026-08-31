@@ -1,0 +1,64 @@
+{
+  "version": "BMA-Synthetic-Index-v0.1",
+  "as_of": "2026-08-31",
+  "index_name": "Business and Management Synthetic Frontier Research Index",
+  "index_short_name": "BMSFRI",
+  "composite_type": "best-published-system frontier envelope",
+  "aggregation": "weighted geometric mean of benchmark scores, followed by an unweighted mean across the 12 tasks",
+  "tasks": {
+    "BMA-COMP-01": {
+      "weights": {"oragentbench_all": 0.50, "corebench_hard": 0.20, "paperbench_replication": 0.15, "apex_consulting_pass1": 0.15},
+      "rationale": "Formal optimisation is closest to ORAgentBench, with reproducibility, paper-production and professional-execution support."
+    },
+    "BMA-COMP-02": {
+      "weights": {"oragentbench_all": 0.45, "corebench_hard": 0.20, "paperbench_replication": 0.20, "apex_consulting_pass1": 0.15},
+      "rationale": "Simulation requires executable modelling and a stronger manuscript-production component."
+    },
+    "BMA-COMP-03": {
+      "weights": {"corebench_hard": 0.35, "paperbench_replication": 0.25, "reprobench_repro_agent": 0.20, "apex_consulting_pass1": 0.20},
+      "rationale": "Machine-learning research combines reproducible execution, experiment construction, result checking and business interpretation."
+    },
+    "BMA-COMP-04": {
+      "weights": {"corebench_hard": 0.35, "paperbench_replication": 0.25, "oragentbench_all": 0.20, "apex_consulting_pass1": 0.20},
+      "rationale": "Forecasting combines reproducibility, experiment construction, executable modelling and professional interpretation."
+    },
+    "BMA-SYN-01": {
+      "weights": {"deepresearch_quality": 0.35, "deepresearch_citation_accuracy": 0.20, "reprobench_repro_agent": 0.25, "paperbench_replication": 0.10, "apex_consulting_pass1": 0.10},
+      "rationale": "Meta-analysis requires retrieval and synthesis plus reproducible quantitative checking."
+    },
+    "BMA-SYN-02": {
+      "weights": {"deepresearch_quality": 0.40, "deepresearch_citation_accuracy": 0.25, "paperbench_replication": 0.15, "apex_consulting_pass1": 0.20},
+      "rationale": "Conceptual theory depends primarily on research depth, evidence integrity, sustained paper construction and business reasoning."
+    },
+    "BMA-SYN-03": {
+      "weights": {"deepresearch_quality": 0.40, "deepresearch_citation_accuracy": 0.25, "reprobench_repro_agent": 0.15, "paperbench_replication": 0.10, "apex_consulting_pass1": 0.10},
+      "rationale": "A systematic review requires report quality, citation integrity, evidence assessment and long-horizon synthesis."
+    },
+    "BMA-SYN-04": {
+      "weights": {"deepresearch_quality": 0.40, "deepresearch_citation_accuracy": 0.25, "reprobench_repro_agent": 0.15, "paperbench_replication": 0.10, "apex_consulting_pass1": 0.10},
+      "rationale": "A systematic review requires report quality, citation integrity, evidence assessment and long-horizon synthesis."
+    },
+    "BMA-DATA-01": {
+      "weights": {"reprobench_repro_agent": 0.30, "corebench_hard": 0.25, "deepresearch_quality": 0.15, "deepresearch_citation_accuracy": 0.10, "apex_consulting_pass1": 0.20},
+      "rationale": "Corporate-panel research combines document interpretation, data reconstruction, statistical execution and evidence checking."
+    },
+    "BMA-DATA-02": {
+      "weights": {"corebench_hard": 0.30, "oragentbench_all": 0.25, "reprobench_repro_agent": 0.15, "deepresearch_quality": 0.10, "apex_consulting_pass1": 0.20},
+      "rationale": "Spatial-panel research emphasises executable data analysis, modelling and reproducibility."
+    },
+    "BMA-DATA-03": {
+      "weights": {"oragentbench_all": 0.35, "corebench_hard": 0.25, "reprobench_repro_agent": 0.15, "apex_consulting_pass1": 0.25},
+      "rationale": "Input-output analysis is an executable operational and economic modelling workflow."
+    },
+    "BMA-DATA-04": {
+      "weights": {"deepresearch_quality": 0.25, "deepresearch_citation_accuracy": 0.20, "reprobench_repro_agent": 0.25, "corebench_hard": 0.10, "apex_consulting_pass1": 0.20},
+      "rationale": "Corporate content analysis combines retrieval, source-grounded coding, reproducibility and business interpretation."
+    }
+  },
+  "claim_rules": [
+    "The index is a synthetic capability signal, not an observed BMA-ARB pass rate.",
+    "The frontier envelope combines different leading systems and harnesses and cannot be attributed to one model.",
+    "Benchmark metrics measure different constructs; index values are not calibrated probabilities.",
+    "The synthetic corpus-share proxy is illustrative and must not be reported as population prevalence or AI adoption."
+  ]
+}

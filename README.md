@@ -38,6 +38,19 @@ python scripts/validate_results.py results/example_results.jsonl
 
 Run the public prompts in `tasks/anchors_v0.1.jsonl` and `tasks/counterfactuals_v0.1.jsonl`. Each run must emit the artefacts listed in `docs/PROTOCOL.md` and a result record conforming to `evaluator/public/score_schema_v0.1.json`.
 
+## Synthetic frontier index
+
+Until direct BMA-ARB runs are practical, the **Business and Management Synthetic Frontier Research Index (BMSFRI)** provides a transparent proxy constructed from seven published adjacent benchmarks. The August 2026 best-published-system frontier envelope is **38.6/100** on the benchmark's raw 12-task basis.
+
+This is neither an observed task pass rate nor a score achieved by one model. Every component, crosswalk weight, imputation and claim limit is public and machine-readable.
+
+```bash
+python scripts/validate_synthetic_inputs.py
+python scripts/build_synthetic_index.py
+```
+
+See `docs/SYNTHETIC_INDEX.md` and `synthetic/results/frontier_envelope_2026-08.json`.
+
 ## Counterfactual rule
 
 Every variant changes at least two design dimensions while retaining the same principal capability and validator family as its anchor. Variants are not assumed to have a single correct published conclusion. They are scored on process integrity, executable analysis and whether claims follow from acquired evidence.
@@ -63,7 +76,7 @@ See `docs/FORECAST_METHOD.md` and `docs/COMPUTE_INVESTMENT_GUIDE.md`.
 
 ## Status
 
-This release is **design-complete but unscored**. Public source endpoints have been identified. Before the first official comparison, freeze the source files, compute checksums and complete evaluator-only validation fixtures.
+This release is **design-complete but not directly scored**. A synthetic frontier index is available as a provisional tracking baseline. Before the first official direct comparison, freeze the source files, compute checksums and complete evaluator-only validation fixtures.
 
 ## Citation
 

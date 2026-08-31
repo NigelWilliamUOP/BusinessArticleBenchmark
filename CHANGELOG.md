@@ -10,3 +10,4 @@
 - Confirmed raw autonomous task pass rate as the headline measure; paired transfer remains diagnostic.
 - Added a taxonomy-weighted capability-share forecast framework and market-intelligence registry.
 - Added a compute-investment decision guide for business schools.
+- Added BMSFRI, a seven-source synthetic frontier-capability index with a public task crosswalk, deterministic builder, sensitivity analysis and explicit claim limits.

@@ -1,0 +1,359 @@
+{
+  "index_version": "BMA-Synthetic-Index-v0.1",
+  "as_of": "2026-08-31",
+  "index_name": "Business and Management Synthetic Frontier Research Index",
+  "composite_type": "best-published-system frontier envelope",
+  "headline": {
+    "synthetic_frontier_index": 38.627336937197576,
+    "scale": "0_to_100",
+    "leave_one_benchmark_out_range": [
+      34.91953472477275,
+      41.952055732435646
+    ],
+    "status": "model_implied_synthetic_signal"
+  },
+  "production_system_indices": {
+    "computational": 28.887190881336117,
+    "secondary_data": 37.88978398251315,
+    "synthesis": 49.10503594774347
+  },
+  "task_results": [
+    {
+      "task_id": "BMA-COMP-01",
+      "production_system": "computational",
+      "synthetic_score": 30.755995337255225,
+      "leave_one_benchmark_out_range": [
+        26.638446893417772,
+        33.83431663605554
+      ],
+      "weights": {
+        "oragentbench_all": 0.5,
+        "corebench_hard": 0.2,
+        "paperbench_replication": 0.15,
+        "apex_consulting_pass1": 0.15
+      },
+      "rationale": "Formal optimisation is closest to ORAgentBench, with reproducibility, paper-production and professional-execution support."
+    },
+    {
+      "task_id": "BMA-COMP-02",
+      "production_system": "computational",
+      "synthetic_score": 29.958717483441244,
+      "leave_one_benchmark_out_range": [
+        26.068673715578083,
+        32.741547206381746
+      ],
+      "weights": {
+        "oragentbench_all": 0.45,
+        "corebench_hard": 0.2,
+        "paperbench_replication": 0.2,
+        "apex_consulting_pass1": 0.15
+      },
+      "rationale": "Simulation requires executable modelling and a stronger manuscript-production component."
+    },
+    {
+      "task_id": "BMA-COMP-03",
+      "production_system": "computational",
+      "synthetic_score": 27.499917442083365,
+      "leave_one_benchmark_out_range": [
+        24.128745483929645,
+        31.797410166587426
+      ],
+      "weights": {
+        "corebench_hard": 0.35,
+        "paperbench_replication": 0.25,
+        "reprobench_repro_agent": 0.2,
+        "apex_consulting_pass1": 0.2
+      },
+      "rationale": "Machine-learning research combines reproducible execution, experiment construction, result checking and business interpretation."
+    },
+    {
+      "task_id": "BMA-COMP-04",
+      "production_system": "computational",
+      "synthetic_score": 27.33413326256463,
+      "leave_one_benchmark_out_range": [
+        23.947056514520572,
+        31.502978871842537
+      ],
+      "weights": {
+        "corebench_hard": 0.35,
+        "paperbench_replication": 0.25,
+        "oragentbench_all": 0.2,
+        "apex_consulting_pass1": 0.2
+      },
+      "rationale": "Forecasting combines reproducibility, experiment construction, executable modelling and professional interpretation."
+    },
+    {
+      "task_id": "BMA-SYN-01",
+      "production_system": "synthesis",
+      "synthetic_score": 46.991546204829035,
+      "leave_one_benchmark_out_range": [
+        39.918562848233016,
+        51.390926905432785
+      ],
+      "weights": {
+        "deepresearch_quality": 0.35,
+        "deepresearch_citation_accuracy": 0.2,
+        "reprobench_repro_agent": 0.25,
+        "paperbench_replication": 0.1,
+        "apex_consulting_pass1": 0.1
+      },
+      "rationale": "Meta-analysis requires retrieval and synthesis plus reproducible quantitative checking."
+    },
+    {
+      "task_id": "BMA-SYN-02",
+      "production_system": "synthesis",
+      "synthetic_score": 49.67509895020725,
+      "leave_one_benchmark_out_range": [
+        40.71164263083957,
+        57.82618289590048
+      ],
+      "weights": {
+        "deepresearch_quality": 0.4,
+        "deepresearch_citation_accuracy": 0.25,
+        "paperbench_replication": 0.15,
+        "apex_consulting_pass1": 0.2
+      },
+      "rationale": "Conceptual theory depends primarily on research depth, evidence integrity, sustained paper construction and business reasoning."
+    },
+    {
+      "task_id": "BMA-SYN-03",
+      "production_system": "synthesis",
+      "synthetic_score": 49.87674931796879,
+      "leave_one_benchmark_out_range": [
+        40.932143905355574,
+        54.90858283422462
+      ],
+      "weights": {
+        "deepresearch_quality": 0.4,
+        "deepresearch_citation_accuracy": 0.25,
+        "reprobench_repro_agent": 0.15,
+        "paperbench_replication": 0.1,
+        "apex_consulting_pass1": 0.1
+      },
+      "rationale": "A systematic review requires report quality, citation integrity, evidence assessment and long-horizon synthesis."
+    },
+    {
+      "task_id": "BMA-SYN-04",
+      "production_system": "synthesis",
+      "synthetic_score": 49.87674931796879,
+      "leave_one_benchmark_out_range": [
+        40.932143905355574,
+        54.90858283422462
+      ],
+      "weights": {
+        "deepresearch_quality": 0.4,
+        "deepresearch_citation_accuracy": 0.25,
+        "reprobench_repro_agent": 0.15,
+        "paperbench_replication": 0.1,
+        "apex_consulting_pass1": 0.1
+      },
+      "rationale": "A systematic review requires report quality, citation integrity, evidence assessment and long-horizon synthesis."
+    },
+    {
+      "task_id": "BMA-DATA-01",
+      "production_system": "secondary_data",
+      "synthetic_score": 38.17792616096597,
+      "leave_one_benchmark_out_range": [
+        34.69786032407093,
+        46.59543243745948
+      ],
+      "weights": {
+        "reprobench_repro_agent": 0.3,
+        "corebench_hard": 0.25,
+        "deepresearch_quality": 0.15,
+        "deepresearch_citation_accuracy": 0.1,
+        "apex_consulting_pass1": 0.2
+      },
+      "rationale": "Corporate-panel research combines document interpretation, data reconstruction, statistical execution and evidence checking."
+    },
+    {
+      "task_id": "BMA-DATA-02",
+      "production_system": "secondary_data",
+      "synthetic_score": 33.18886000009131,
+      "leave_one_benchmark_out_range": [
+        30.52185492730483,
+        40.38134508674045
+      ],
+      "weights": {
+        "corebench_hard": 0.3,
+        "oragentbench_all": 0.25,
+        "reprobench_repro_agent": 0.15,
+        "deepresearch_quality": 0.1,
+        "apex_consulting_pass1": 0.2
+      },
+      "rationale": "Spatial-panel research emphasises executable data analysis, modelling and reproducibility."
+    },
+    {
+      "task_id": "BMA-DATA-03",
+      "production_system": "secondary_data",
+      "synthetic_score": 33.444847262514855,
+      "leave_one_benchmark_out_range": [
+        29.986996046378323,
+        39.05702781462806
+      ],
+      "weights": {
+        "oragentbench_all": 0.35,
+        "corebench_hard": 0.25,
+        "reprobench_repro_agent": 0.15,
+        "apex_consulting_pass1": 0.25
+      },
+      "rationale": "Input-output analysis is an executable operational and economic modelling workflow."
+    },
+    {
+      "task_id": "BMA-DATA-04",
+      "production_system": "secondary_data",
+      "synthetic_score": 46.747502506480444,
+      "leave_one_benchmark_out_range": [
+        39.65959229546775,
+        51.09446677855871
+      ],
+      "weights": {
+        "deepresearch_quality": 0.25,
+        "deepresearch_citation_accuracy": 0.2,
+        "reprobench_repro_agent": 0.25,
+        "corebench_hard": 0.1,
+        "apex_consulting_pass1": 0.2
+      },
+      "rationale": "Corporate content analysis combines retrieval, source-grounded coding, reproducibility and business interpretation."
+    }
+  ],
+  "benchmark_registry": [
+    {
+      "benchmark_id": "paperbench_replication",
+      "benchmark": "PaperBench",
+      "metric": "Average replication score",
+      "score": 0.21,
+      "score_scale": "0_to_1",
+      "reported_system": "Claude 3.5 Sonnet (New) with open-source scaffold",
+      "published_date": "2025-04-02",
+      "source_url": "https://openai.com/index/paperbench/",
+      "source_type": "benchmark paper and maintainer page",
+      "capability": "End-to-end research-paper replication",
+      "qualification": "AI and machine-learning papers; not current-model coverage."
+    },
+    {
+      "benchmark_id": "corebench_hard",
+      "benchmark": "CORE-Bench",
+      "metric": "Accuracy on hardest task level",
+      "score": 0.21,
+      "score_scale": "0_to_1",
+      "reported_system": "Best reported agent configuration",
+      "published_date": "2024-09-17",
+      "source_url": "https://arxiv.org/abs/2409.11363",
+      "source_type": "benchmark paper",
+      "capability": "Computational reproducibility using supplied code and data",
+      "qualification": "Older model coverage; supplied reproduction package makes it easier than creating a study from scratch."
+    },
+    {
+      "benchmark_id": "reprobench_repro_agent",
+      "benchmark": "REPRO-Bench",
+      "metric": "Exact reproducibility-score accuracy",
+      "score": 0.366,
+      "score_scale": "0_to_1",
+      "reported_system": "REPRO-Agent",
+      "published_date": "2025-07-25",
+      "source_url": "https://arxiv.org/html/2507.18901v1",
+      "source_type": "benchmark paper",
+      "capability": "End-to-end social-science reproducibility assessment",
+      "qualification": "Purpose-built agent; evaluates an existing paper and package rather than producing a new paper."
+    },
+    {
+      "benchmark_id": "oragentbench_all",
+      "benchmark": "ORAgentBench",
+      "metric": "All-task pass rate",
+      "score": 0.3551,
+      "score_scale": "0_to_1",
+      "reported_system": "Best of 14 frontier model-agent configurations",
+      "published_date": "2026-06-18",
+      "source_url": "https://arxiv.org/html/2606.19787",
+      "source_type": "benchmark paper",
+      "capability": "Executable end-to-end operations-research workflow",
+      "qualification": "Closest proxy for optimisation tasks, but does not require a publishable manuscript."
+    },
+    {
+      "benchmark_id": "deepresearch_quality",
+      "benchmark": "DeepResearch Bench",
+      "metric": "RACE overall report-quality score",
+      "score": 0.4888,
+      "score_scale": "0_to_1",
+      "reported_system": "Gemini 2.5 Pro Deep Research",
+      "published_date": "2025-06-13",
+      "source_url": "https://deepresearch-bench.github.io/",
+      "source_type": "benchmark paper and maintainer leaderboard",
+      "capability": "Deep-research report completeness, depth, instruction following and readability",
+      "qualification": "Report-quality score is not a pass probability and does not test executable empirical analysis."
+    },
+    {
+      "benchmark_id": "deepresearch_citation_accuracy",
+      "benchmark": "DeepResearch Bench",
+      "metric": "Citation accuracy",
+      "score": 0.9024,
+      "score_scale": "0_to_1",
+      "reported_system": "Perplexity Deep Research",
+      "published_date": "2025-06-13",
+      "source_url": "https://deepresearch-bench.github.io/",
+      "source_type": "benchmark paper and maintainer leaderboard",
+      "capability": "Correct support and attribution of research-report citations",
+      "qualification": "Different system from the report-quality leader; evidence accuracy alone is not paper completion."
+    },
+    {
+      "benchmark_id": "apex_consulting_pass1",
+      "benchmark": "APEX-Agents Management Consultant",
+      "metric": "ReAct Pass@1",
+      "score": 0.464,
+      "score_scale": "0_to_1",
+      "reported_system": "Fable 5",
+      "published_date": "2026-07-30",
+      "source_url": "https://www.mercor.com/resources/apex/best-ai-models-for-management-consulting/",
+      "source_type": "benchmark-maintainer leaderboard",
+      "capability": "Long-horizon professional business analysis with files and tools",
+      "qualification": "Mutable leaderboard snapshot; management consulting is adjacent to, but not equivalent to, academic research."
+    }
+  ],
+  "global_leave_one_out": [
+    {
+      "dropped_benchmark": "paperbench_replication",
+      "index": 41.34701788063834
+    },
+    {
+      "dropped_benchmark": "corebench_hard",
+      "index": 41.952055732435646
+    },
+    {
+      "dropped_benchmark": "reprobench_repro_agent",
+      "index": 39.57397467698454
+    },
+    {
+      "dropped_benchmark": "oragentbench_all",
+      "index": 37.66568366037635
+    },
+    {
+      "dropped_benchmark": "deepresearch_quality",
+      "index": 38.3928256922762
+    },
+    {
+      "dropped_benchmark": "deepresearch_citation_accuracy",
+      "index": 34.91953472477275
+    },
+    {
+      "dropped_benchmark": "apex_consulting_pass1",
+      "index": 37.18843154062568
+    }
+  ],
+  "illustrative_corpus_share_proxy": {
+    "taxonomy_weighted_capability_within_opportunity_envelope": 40.07489084868664,
+    "share_of_recovered_corpus_percent": 4.087943609982963,
+    "leave_one_benchmark_out_range": [
+      3.649227662912095,
+      4.406568667705443
+    ],
+    "opportunity_envelope_percent": 10.20076043480212,
+    "status": "illustrative_only_not_a_prevalence_estimate"
+  },
+  "claim_rules": [
+    "The index is a synthetic capability signal, not an observed BMA-ARB pass rate.",
+    "The frontier envelope combines different leading systems and harnesses and cannot be attributed to one model.",
+    "Benchmark metrics measure different constructs; index values are not calibrated probabilities.",
+    "The synthetic corpus-share proxy is illustrative and must not be reported as population prevalence or AI adoption."
+  ]
+}
