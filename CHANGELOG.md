@@ -8,3 +8,5 @@
 - Added runner instructions and a public source registry.
 - Separated evaluator-only material from the public release.
 - Confirmed raw autonomous task pass rate as the headline measure; paired transfer remains diagnostic.
+- Added a taxonomy-weighted capability-share forecast framework and market-intelligence registry.
+- Added a compute-investment decision guide for business schools.

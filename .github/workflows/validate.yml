@@ -13,4 +13,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/validate_manifests.py
-      - run: python -m py_compile scripts/validate_manifests.py scripts/validate_results.py
+      - run: python scripts/validate_forecast_inputs.py
+      - run: python -m py_compile scripts/validate_manifests.py scripts/validate_results.py scripts/validate_forecast_inputs.py scripts/forecast_capability_share.py

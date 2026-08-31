@@ -42,6 +42,18 @@ Run the public prompts in `tasks/anchors_v0.1.jsonl` and `tasks/counterfactuals_
 
 Every variant changes at least two design dimensions while retaining the same principal capability and validator family as its anchor. Variants are not assumed to have a single correct published conclusion. They are scored on process integrity, executable analysis and whether claims follow from acquired evidence.
 
+## Capability-share forecast
+
+`scripts/forecast_capability_share.py` converts system-specific benchmark passes into a benchmark-calibrated share of the frozen 2026 corpus using the audited taxonomy weights. It then produces transparent conservative, central and accelerated scenario paths.
+
+The raw task pass rate remains the benchmark headline. The population bridge and forecast are separate model-implied quantities. No numerical forecast should be released until a valid BMA-ARB baseline has been run.
+
+```bash
+python scripts/forecast_capability_share.py results/results.jsonl
+```
+
+See `docs/FORECAST_METHOD.md` and `docs/COMPUTE_INVESTMENT_GUIDE.md`.
+
 ## Versioning
 
 - Task wording, permitted inputs and validators are immutable within a task version.

@@ -1,0 +1,39 @@
+{
+  "version": "taxonomy-weights-v0.1",
+  "as_of": "2026-08-31",
+  "population": "Recovered 2026 Scopus Business, Management and Accounting export corpus",
+  "population_records": 64815,
+  "estimand": "Core and interdisciplinary business papers whose abstract-visible workflow appeared autonomously feasible with public digital inputs",
+  "status": "weighted_measurement_audit",
+  "core_opportunity_share": 0.1020076043480212,
+  "core_opportunity_percent": 10.20076043480212,
+  "systems": {
+    "computational": {
+      "weighted_papers": 1684.4758169934632,
+      "share_of_population": 0.02598898120795284,
+      "share_of_core_opportunity": 0.2547749393200703
+    },
+    "synthesis": {
+      "weighted_papers": 2640.310980392158,
+      "share_of_population": 0.040736110165735674,
+      "share_of_core_opportunity": 0.39934385702026237
+    },
+    "secondary_data": {
+      "weighted_papers": 2286.8360784313736,
+      "share_of_population": 0.03528251297433269,
+      "share_of_core_opportunity": 0.3458812036596674
+    }
+  },
+  "exclusion": {
+    "label": "Technical and computational cross-field",
+    "weighted_papers": 1810.655816993464,
+    "share_of_population": 0.027935752788605477,
+    "reason": "Primary research question was technical or computational rather than business or management"
+  },
+  "limitations": [
+    "The denominator is the recovered export corpus, not the full Scopus result count.",
+    "Weights derive from a small probability audit and fine taxonomy cells remain exploratory.",
+    "The 10.20% value is an opportunity envelope, not an observed AI authorship or autonomous completion rate.",
+    "Annual corpus re-audits are required before changing these weights."
+  ]
+}

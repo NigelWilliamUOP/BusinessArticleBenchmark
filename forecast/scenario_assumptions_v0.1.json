@@ -1,0 +1,26 @@
+{
+  "version": "BMA-ARB-forecast-scenarios-v0.1",
+  "as_of": "2026-08-31",
+  "forecast_horizons_months": [6, 12, 24, 36],
+  "scenarios": {
+    "conservative": {
+      "business_task_pass_odds_doubling_months": 36,
+      "rationale": "Slow cross-domain transfer and persistent evidence-verification bottlenecks."
+    },
+    "central": {
+      "business_task_pass_odds_doubling_months": 18,
+      "rationale": "Partial transfer from general agent progress, with business-research reliability improving more slowly than the historical software time horizon."
+    },
+    "accelerated": {
+      "business_task_pass_odds_doubling_months": 9,
+      "rationale": "Rapid improvement in long-horizon agents, inference infrastructure, retrieval and verification."
+    }
+  },
+  "scope": "Conditional scenario forecast after a BMA-ARB baseline is observed",
+  "rules": [
+    "Do not issue a numerical dated forecast before at least one valid BMA-ARB run exists.",
+    "Do not treat scenario spread as a statistical confidence interval.",
+    "Keep the frozen-2026 capability-share forecast separate from annual opportunity-envelope revisions.",
+    "Replace these priors with fitted BMA-ARB trends after at least six monthly observations and two frontier-model generations."
+  ]
+}
