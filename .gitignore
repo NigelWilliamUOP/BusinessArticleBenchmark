@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+venv/
+evaluator/private/
+source_snapshots/
+results/runs/
+*.tar.gz
+*.zip

@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use BMA-ARB, cite this repository and the exact release used."
+title: "Business and Management Autonomous Research Benchmark"
+version: "0.1.0"
+date-released: "2026-08-31"
+authors:
+  - family-names: "Williams"
+    given-names: "Nigel"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/NigelWilliamUOP/business-management-ai-benchmark"
+keywords:
+  - artificial intelligence
+  - autonomous research
+  - business and management
+  - benchmark
+  - reproducibility
