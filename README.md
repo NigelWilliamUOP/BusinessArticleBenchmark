@@ -1,0 +1,62 @@
+# Business and Management Autonomous Research Benchmark
+
+**BMA-ARB** measures whether a frontier-model agent can autonomously produce a technically complete, verifiable business or management research paper from a research brief and permitted public digital inputs.
+
+It is a capability benchmark, not an AI-writing detector and not a prediction of journal acceptance. A pass requires a complete manuscript, cleanly executable analysis, valid results, reliable evidence and no substantive human intervention.
+
+## What is in this release
+
+- 12 baseline anchor tasks derived from the 2026 Scopus taxonomy.
+- 12 matched counterfactual variants that preserve the capability tested while changing the empirical setting, construct, period or model assumptions.
+- Public scoring rules, result schema and deterministic validation scripts.
+- A runner hand-off for Antigravity or another auditable agent harness.
+- A source registry for reconstructing public-data tasks.
+
+Evaluator-only answer keys, hidden validators and paper identifiers are intentionally excluded from the public repository.
+
+## Benchmark design
+
+| Production system | Anchor tasks | Counterfactual variants |
+| --- | ---: | ---: |
+| Computational experiments and formal models | 4 | 4 |
+| Literature, document and conceptual synthesis | 4 | 4 |
+| Secondary-data and digital-text analysis | 4 | 4 |
+
+The headline measure is the **raw autonomous task pass rate**: tasks passing all five mandatory gates divided by all initiated tasks. The paired design supplies two secondary diagnostics:
+
+1. **Anchor performance** measures longitudinal change on stable tasks.
+2. **Counterfactual transfer** measures whether capability survives substantive changes that make memorising the reference paper insufficient.
+
+Report the raw pass rate first. Report anchor, counterfactual and paired-transfer results separately underneath it; do not substitute a transfer-adjusted composite score.
+
+## Quick start
+
+```bash
+python scripts/validate_manifests.py
+python scripts/validate_results.py results/example_results.jsonl
+```
+
+Run the public prompts in `tasks/anchors_v0.1.jsonl` and `tasks/counterfactuals_v0.1.jsonl`. Each run must emit the artefacts listed in `docs/PROTOCOL.md` and a result record conforming to `evaluator/public/score_schema_v0.1.json`.
+
+## Counterfactual rule
+
+Every variant changes at least two design dimensions while retaining the same principal capability and validator family as its anchor. Variants are not assumed to have a single correct published conclusion. They are scored on process integrity, executable analysis and whether claims follow from acquired evidence.
+
+## Versioning
+
+- Task wording, permitted inputs and validators are immutable within a task version.
+- New variants receive new identifiers; old tasks are never silently rewritten.
+- Exact model, harness, tool environment, budget and source snapshot must be recorded for every run.
+- Fixed anchors and counterfactual variants must be reported separately.
+
+## Status
+
+This release is **design-complete but unscored**. Public source endpoints have been identified. Before the first official comparison, freeze the source files, compute checksums and complete evaluator-only validation fixtures.
+
+## Citation
+
+See `CITATION.cff`.
+
+## Licence
+
+Code is released under the MIT License. Task briefs, documentation and rubrics are released under CC BY 4.0; see `LICENSE-DATA`.
