@@ -1,0 +1,78 @@
+name: Living benchmark genealogy
+
+on:
+  push:
+    paths:
+      - "genealogy/**"
+      - "scripts/validate_genealogy.py"
+      - "scripts/render_genealogy.py"
+      - "scripts/update_genealogy_candidates.py"
+      - "scripts/build_portsmouth_portfolio_profile.py"
+      - ".github/workflows/genealogy.yml"
+  pull_request:
+    paths:
+      - "genealogy/**"
+      - "scripts/validate_genealogy.py"
+      - "scripts/render_genealogy.py"
+      - "scripts/update_genealogy_candidates.py"
+      - "scripts/build_portsmouth_portfolio_profile.py"
+      - ".github/workflows/genealogy.yml"
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  validate:
+    if: github.event_name != 'schedule' && github.event_name != 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/validate_genealogy.py
+      - run: python scripts/render_genealogy.py --check
+      - run: >-
+          python -m py_compile
+          scripts/validate_genealogy.py
+          scripts/render_genealogy.py
+          scripts/update_genealogy_candidates.py
+          scripts/build_portsmouth_portfolio_profile.py
+
+  refresh-candidates:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/update_genealogy_candidates.py
+      - run: python scripts/render_genealogy.py
+      - run: python scripts/validate_genealogy.py
+      - name: Open a draft pull request when the queue changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No new candidates."
+            exit 0
+          fi
+          branch="bot/genealogy-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add genealogy/candidates/latest.jsonl genealogy/generated/GENEALOGY.md
+          git commit -m "Refresh living benchmark genealogy candidates"
+          git push origin "$branch"
+          gh pr create \
+            --draft \
+            --base "${{ github.event.repository.default_branch }}" \
+            --head "$branch" \
+            --title "Review newly discovered AI-research benchmark candidates" \
+            --body "Automated discovery only. Review primary sources, claim boundaries and relationships before promoting any candidate to the curated genealogy."
