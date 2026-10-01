@@ -1,0 +1,21 @@
+{
+  "run_month": "2026-09",
+  "benchmark_version": "BMA-ARB-v0.1",
+  "source_repository_commit": "0f3cb32ba2e57a762d6ed4baedd8058a0166679c",
+  "harness_change_status": "UNRECORDED; freeze commit and system prompt hash before launch",
+  "external_execution_available": false,
+  "primary_models": 5,
+  "planned_primary_runs": 60,
+  "initiated_runs": 0,
+  "completed_runs": 0,
+  "passed_runs": 0,
+  "raw_task_pass_rate": null,
+  "clean_execution_rate": null,
+  "evidence_failure_count": null,
+  "actual_cost_gbp": 0.0,
+  "maximum_cost_gbp": 1500.0,
+  "remaining_primary_runs": 60,
+  "optional_shadow_runs": 12,
+  "contamination_risk": "HIGH_UNRESOLVED",
+  "official_scoring_eligible": false
+}
