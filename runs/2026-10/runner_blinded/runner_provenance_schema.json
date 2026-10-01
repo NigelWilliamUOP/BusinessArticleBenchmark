@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BMA-ARB blinded runner provenance",
+  "type": "object",
+  "required": [
+    "run_id",
+    "opaque_task_id",
+    "model_code",
+    "run_status",
+    "resources"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "opaque_task_id": {
+      "type": "string",
+      "pattern": "^S26-10-[0-9]{3}$"
+    },
+    "model_code": {
+      "type": "string"
+    },
+    "run_status": {
+      "enum": [
+        "completed",
+        "agent_failure",
+        "infrastructure_failure",
+        "budget_exhausted",
+        "time_exhausted"
+      ]
+    },
+    "resources": {
+      "type": "object",
+      "required": [
+        "wall_seconds",
+        "input_tokens",
+        "output_tokens",
+        "tool_calls",
+        "cost_gbp"
+      ]
+    }
+  }
+}

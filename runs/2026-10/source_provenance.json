@@ -1,0 +1,11 @@
+{
+  "benchmark_repository": "NigelWilliamUOP/BusinessArticleBenchmark",
+  "fixed_spec_commit": "0f3cb32ba2e57a762d6ed4baedd8058a0166679c",
+  "september_preparation_head": "1118716169672ce2ae10f2cdc77c5e44e67923f9",
+  "anchor_manifest_blob_sha": "dde8518ce777adf43c19a8b2e98c5c2ac623faa9",
+  "protocol_blob_sha": "8b72ce57c07764172320fda14055e647c6e901a8",
+  "rubric_blob_sha": "c05b615811ff64455c4c1811f32a781f6afa2711",
+  "score_schema_blob_sha": "718c4245da99d810ff74856e1ebacd6089fdd786",
+  "opaque_mapping_seed": 20261001,
+  "freeze_date": "2026-10-01"
+}
