@@ -51,6 +51,23 @@ python scripts/build_synthetic_index.py
 
 See `docs/SYNTHETIC_INDEX.md` and `synthetic/results/frontier_envelope_2026-08.json`.
 
+## Living benchmark genealogy
+
+`genealogy/` maintains a reviewed graph of AI-scientist systems, benchmarks, verifier programmes and evaluation frameworks. It records what each work evaluates, the human guidance supplied, whether compute or human time is reported, its relationship to BMA-ARB and the claim boundary.
+
+The genealogy also defines the planned **Portsmouth Business School Research Production Frontier**. This extension will estimate journal-ready outputs as a function of human effort, compute, orchestration, verification and Portsmouth's observed output portfolio. It is collaboration-first: Project APE and CRED are priority partners rather than systems to duplicate.
+
+The public Portsmouth profile contains aggregates only. The current audit snapshot supports provisional title-level coverage signals but lacks journal title and ISSN, so journal weighting remains pending an authorised public-metadata join.
+
+```bash
+python scripts/validate_genealogy.py
+python scripts/render_genealogy.py --check
+```
+
+A weekly workflow searches arXiv for new candidates and opens a draft pull request only when the discovery queue changes. Candidates are never promoted automatically.
+
+See `genealogy/README.md` and `genealogy/generated/GENEALOGY.md`.
+
 ## Counterfactual rule
 
 Every variant changes at least two design dimensions while retaining the same principal capability and validator family as its anchor. Variants are not assumed to have a single correct published conclusion. They are scored on process integrity, executable analysis and whether claims follow from acquired evidence.
@@ -73,6 +90,7 @@ See `docs/FORECAST_METHOD.md` and `docs/COMPUTE_INVESTMENT_GUIDE.md`.
 - New variants receive new identifiers; old tasks are never silently rewritten.
 - Exact model, harness, tool environment, budget and source snapshot must be recorded for every run.
 - Fixed anchors and counterfactual variants must be reported separately.
+- Genealogy candidates remain separate from curated records until a primary-source review is complete.
 
 ## Status
 

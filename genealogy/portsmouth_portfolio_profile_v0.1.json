@@ -1,0 +1,66 @@
+{
+  "profile_id": "portsmouth_business_school_uoa17_v0.1",
+  "version": "0.1",
+  "as_of": "2026-09-03",
+  "institution": "University of Portsmouth",
+  "unit": "Business and Management Studies (UOA17 proxy for the Portsmouth Business School research-output portfolio)",
+  "source_type": "Internal aggregate output-audit snapshot; source rows are not published in this repository.",
+  "privacy": "The public profile exports no output titles, authors, staff names, identifiers, email addresses, reviewer grades or provisional selection decisions.",
+  "candidate_output_count": 277,
+  "classification_method": "Overlapping, case-insensitive title-keyword signals. These are provisional research-design cues, not article-level classifications.",
+  "signals_overlap": true,
+  "title_signal_counts": [
+    {
+      "signal": "quantitative_or_effect",
+      "count": 46,
+      "percent_of_outputs": 16.6
+    },
+    {
+      "signal": "policy_documentary_historical",
+      "count": 42,
+      "percent_of_outputs": 15.2
+    },
+    {
+      "signal": "digital_text_data",
+      "count": 28,
+      "percent_of_outputs": 10.1
+    },
+    {
+      "signal": "conceptual_or_theory",
+      "count": 15,
+      "percent_of_outputs": 5.4
+    },
+    {
+      "signal": "evidence_synthesis",
+      "count": 11,
+      "percent_of_outputs": 4.0
+    },
+    {
+      "signal": "formal_or_computational",
+      "count": 8,
+      "percent_of_outputs": 2.9
+    },
+    {
+      "signal": "qualitative_or_case",
+      "count": 3,
+      "percent_of_outputs": 1.1
+    },
+    {
+      "signal": "no_explicit_design_signal",
+      "count": 147,
+      "percent_of_outputs": 53.1
+    }
+  ],
+  "journal_portfolio_status": "not_yet_enriched",
+  "journal_portfolio_note": "The available audit snapshot does not contain journal title or ISSN. Journal-level weighting will be added only after an authorised metadata join against public publication records.",
+  "benchmark_weighting_policy": {
+    "current": "Use this profile only to check that pilot tasks cover the observed range of title-level research-design signals. Do not derive a journal-tier target from it.",
+    "target": "Weight article trials and modular tasks to the observed three-year Portsmouth portfolio by journal, article type and method family after journal and ISSN enrichment.",
+    "prohibitions": [
+      "Do not infer CABS or journal tiers from paper titles.",
+      "Do not publish row-level internal output-audit data.",
+      "Do not treat overlapping title signals as mutually exclusive article classes.",
+      "Do not optimise towards a generic journal distribution when the Portsmouth portfolio becomes available."
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "as_of": "2026-09-03",
+  "source": "arXiv Atom API",
+  "lookback_days": 240,
+  "max_results_per_query": 20,
+  "queries": [
+    "AI scientist",
+    "autonomous research agent",
+    "scientific agent benchmark",
+    "automated scientific discovery",
+    "social science agent",
+    "scientific reproducibility agent",
+    "research production function AI"
+  ],
+  "candidate_policy": "Discovery only. New records enter genealogy/candidates/latest.jsonl and require human review before promotion to the curated node and edge registries.",
+  "manual_watchlist": [
+    {
+      "name": "Project APE",
+      "url": "https://ape.socialcatalystlab.org/",
+      "reason": "Active social-science paper-production programme and closest collaboration target."
+    },
+    {
+      "name": "CRED",
+      "url": "https://ape.socialcatalystlab.org/cred/",
+      "reason": "Living verifier cost-recall benchmark."
+    },
+    {
+      "name": "Agents' Last Exam",
+      "url": "https://arxiv.org/abs/2606.05405",
+      "reason": "Explicit living benchmark of economically valuable long-horizon work."
+    }
+  ]
+}
