@@ -1,0 +1,37 @@
+{
+  "run_month": "2026-11",
+  "benchmark_version": "BMA-ARB-v0.1",
+  "fixed_task_source_commit": "0f3cb32ba2e57a762d6ed4baedd8058a0166679c",
+  "prior_month_main_head": "0f1df47c7671b00ed013b6186faac126d0e631e5",
+  "model_panel_change": "Google primary replacement; DeepSeek underlying alias update; three primaries unchanged; two launchable shadows; one pending-access frontier candidate",
+  "harness_change_status": "NO CHANGE APPLIED; exact harness commit, system prompt hash and tool image remain unfrozen",
+  "external_execution_available": false,
+  "workflow_profile": {
+    "computational": 4,
+    "synthesis": 4,
+    "secondary_data": 4
+  },
+  "primary_models": 5,
+  "planned_primary_runs": 60,
+  "initiated_runs": 0,
+  "completed_runs": 0,
+  "passed_runs": 0,
+  "raw_task_pass_rate": null,
+  "workflow_pass_rates": {
+    "computational": null,
+    "synthesis": null,
+    "secondary_data": null
+  },
+  "clean_execution_rate": null,
+  "evidence_failure_count": null,
+  "actual_cost_gbp": 0.0,
+  "maximum_cost_gbp": 1500.0,
+  "remaining_primary_runs": 60,
+  "historical_unexecuted_rows": 120,
+  "historical_rows_temporally_recoverable": false,
+  "optional_launchable_shadow_runs": 24,
+  "pending_access_candidate_runs": 12,
+  "contamination_risk": "HIGH_RETRIEVAL; TRAINING_EXPOSURE_UNCERTAIN",
+  "official_scoring_eligible": false,
+  "result_claim_ceiling": "NO RESULT; runs not initiated and deterministic validator fixtures not built"
+}

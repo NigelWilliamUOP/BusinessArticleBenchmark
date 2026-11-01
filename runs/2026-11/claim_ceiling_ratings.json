@@ -1,0 +1,32 @@
+{
+  "coverage_and_selection": {
+    "score": 0,
+    "evidence": "0 of 60 November primary runs initiated",
+    "consequence": "no observed denominator"
+  },
+  "construct_validity": {
+    "score": 1,
+    "evidence": "paper-level pass construct specified but 12 deterministic validator fixtures are not built",
+    "consequence": "no official pass judgement"
+  },
+  "measurement_and_linkage": {
+    "score": 0,
+    "evidence": "no run outputs or evaluator records",
+    "consequence": "performance fields remain null"
+  },
+  "identification_and_comparison": {
+    "score": 0,
+    "evidence": "no executed model comparison",
+    "consequence": "no temporal or provider comparison"
+  },
+  "uncertainty_and_robustness": {
+    "score": 0,
+    "evidence": "no replications or observed failures",
+    "consequence": "no uncertainty estimate"
+  },
+  "reproducibility_and_release_integrity": {
+    "score": 1,
+    "evidence": "fixed manifests are traceable, but execution harness and resolved model snapshots are unfrozen",
+    "consequence": "preparation-only release"
+  }
+}
